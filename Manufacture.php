@@ -73,10 +73,12 @@ EOF;
          <?php
             $rawString='';
             while($rm=pg_fetch_row($val)){
-              $rawString=$rawString.$rm[2].' '.$rawString.$rm[3].' '.$rawString.$rm[4].' | ';
-            } 
+              // $rawString=$rawString.$rm[2].' '.$rm[3].' '.$rm[4].' | ';
          ?>
-         <td><?php echo $rawString; ?></td>
+         <td><?php echo $rm[2]; ?></td>
+         <td><?php echo $rm[3]; ?></td>
+         <td><?php echo $rm[4]; ?></td>
+            <?php } ?>
       </tr>
 
 <?php       
