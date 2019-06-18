@@ -12,7 +12,7 @@
 
    if(isset($_POST['submit'])){
 
-      $tgl = new DateTime('now');
+      $tgl = date('d-m-Y H:i:s');
       $raw = $_POST['raw_material'];
       $cost = $_POST['cost'];
       $avail = $_POST['Availability'];
