@@ -12,6 +12,7 @@
 
    if(isset($_POST['submit'])){
 
+      $tgl = new DateTime('now');
       $raw = $_POST['raw_material'];
       $cost = $_POST['cost'];
       $avail = $_POST['Availability'];
@@ -21,7 +22,7 @@
 
       $sql =<<<EOF
       set search_path to sco;
-      insert into supplier values ('$user','$raw','$cost','$avail');
+      insert into supplier values ('$user','$raw','$cost','$avail','$tgl');
 EOF;
       
       $ret = pg_query($db, $sql);

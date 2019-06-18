@@ -31,9 +31,10 @@
   <table class="table">
     <thead>
       <tr>
+        <th>Tanggal</th>
         <th>Raw Material</th>
         <th>Cost Per Ton</th>
-        <th>Availability</th>
+        <th>Quantity</th>
       </tr>
 
 <?php
@@ -62,9 +63,11 @@ EOF;
          $raw_material = $row[1];
          $cpt = $row[2];
          $ava = $row[3];
+         $tgl = $row[4];
 ?>  
    
       <tr>
+          <td><?php echo $tgl; ?></td>
          <td><?php echo $raw_material; ?></td>
          <td><?php echo $cpt; ?></td>
          <td><?php echo $ava;?></td>

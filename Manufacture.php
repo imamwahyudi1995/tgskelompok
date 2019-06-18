@@ -71,7 +71,7 @@ EOF;
       <tr>
          <td><?php echo $product; ?></td>
          <?php
-            $rawString='';
+            // $rawString='';
             while($rm=pg_fetch_row($val)){
               // $rawString=$rawString.$rm[2].' '.$rm[3].' '.$rm[4].' | ';
          ?>
