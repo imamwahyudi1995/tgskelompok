@@ -33,6 +33,7 @@
       <tr>
         <th>Product</th>
         <th>Raw Materials</th>
+        <th>Quantity</th>
       </tr>
 
 <?php
@@ -72,7 +73,7 @@ EOF;
          <?php
             $rawString='';
             while($rm=pg_fetch_row($val)){
-              $rawString=$rawString.$rm[2].' '.$rm[3].' | ';
+              $rawString=$rawString.$rm[2].' '.$rm[3].' '.$rm[4].' | ';
             } 
          ?>
          <td><?php echo $rawString; ?></td>
