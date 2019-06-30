@@ -10,13 +10,12 @@
    }
 
    $user = $_SESSION['userName'];
-   if(isset($_POST['submit'])){
-
-      $raw = $_POST['raw_material'];
+   
+      $id = $_GET['page'];
 
       $sql =<<<EOF
       set search_path to sco;
-      delete from supplier where supplierName='$user' and raw_material='$raw';
+      delete from procurement where pname='$user' and id='$id';
 EOF;
       
       $ret = pg_query($db, $sql);
@@ -26,9 +25,8 @@ EOF;
       
       pg_close($db);
       
-      echo "<script>location='Supplier.php'</script>";
+      echo "<script>location='Procurement.php'</script>";
       header('Location: Supplier.html');
       exit;
-      }
    
 ?>

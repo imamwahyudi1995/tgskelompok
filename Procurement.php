@@ -23,9 +23,6 @@
 </div>
 <div class="sup">
     <a href="newProcurement.html" class="btn">Add item</a>
-    <a href="uitemd.html" class="btn">Update item</a>
-    <a href="pHistoryd.html" class="btn">Purchase History</a>
-    <a href="sHistoryd.html" class="btn">Sales History</a>
 </div>
   <div class="table-responsive">          
   <table class="table">
