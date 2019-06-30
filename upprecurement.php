@@ -3,28 +3,6 @@
   if($_SESSION['userName']==true){
     $user = $_SESSION['userName']; 
   }
-?>
-<h2><?php echo $user; ?>'s Table</h2> 
-<div class="red1">
-  <a href="logout.php" class="btn">Logout</a>
-</div>
-<div class="sup">
-    <a href="newProcurement.html" class="btn">Add item</a>
-    <a href="uitemd.html" class="btn">Update item</a>
-    <a href="pHistoryd.html" class="btn">Purchase History</a>
-    <a href="sHistoryd.html" class="btn">Sales History</a>
-</div>
-  <div class="table-responsive">          
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Tanggal</th>
-        <th>Raw Material</th>
-        <th>Quantity</th>
-        <th>Action</th>
-      </tr>
-
-<?php
    $host        = "host = ec2-54-227-250-33.compute-1.amazonaws.com";
    $port        = "port = 5432";
    $dbname      = "dbname = dfh1ffcplg2486";
