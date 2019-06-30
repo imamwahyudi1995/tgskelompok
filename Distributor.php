@@ -32,9 +32,10 @@
   <table class="table">
     <thead>
       <tr>
+        <th>Tanggal</th>
         <th>Raw Material</th>
         <th>Cost Per Ton</th>
-        <th>Availability</th>
+        <th>Quantity</th>
       </tr>
 
 <?php
@@ -51,7 +52,7 @@
 
       $sql =<<<EOF
       set search_path to sco;
-      select * from distributor where dName='$user';
+      select * from procurement where dName='$user';
 EOF;
 
       $ret = pg_query($db, $sql);
@@ -60,15 +61,17 @@ EOF;
       }
       
       while($row=pg_fetch_row($ret)){
-         $raw_material = $row[1];
-         $cpt = $row[2];
-         $ava = $row[3];
+         $tgl = $row[0];
+         $material = $row[1];
+         $cost = $row[2];
+         $quantity = $row[3];
 ?>  
    
       <tr>
-         <td><?php echo $raw_material; ?></td>
-         <td><?php echo $cpt; ?></td>
-         <td><?php echo $ava;?></td>
+         <td><?php echo $tgl; ?></td>
+         <td><?php echo $material; ?></td>
+         <td><?php echo $cost;?></td>
+         <td><?php echo $quantity;?></td>
       </tr>
 
 <?php       
