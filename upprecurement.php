@@ -16,7 +16,7 @@
     $page = $_GET['page'];
       $sql =<<<EOF
       set search_path to sco;
-      select * from procurement where pname='$user' id='$page';
+      select * from procurement where pname='$user' id=$page;
 EOF;
 
       $ret = pg_query($db, $sql);
