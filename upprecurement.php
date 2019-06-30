@@ -50,7 +50,7 @@ EOF;
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Information</h4>
-							<form method="POST" action="updateProcurement.php">
+							<form method="POST" action="updateprocurement.php">
 								<div class="form-group">
 									<label for="raw_material">Raw Material</label>
 									<input id="raw_material" type="text" class="form-control" value="<?php echo $row[1]; ?>" name="raw_material" required>
