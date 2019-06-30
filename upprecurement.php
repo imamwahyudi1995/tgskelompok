@@ -16,7 +16,37 @@
 				<div class="card-wrapper">
 					<div class="ab">
 						
-					</div>
+                    </div>
+                    <?php 
+  session_start(); 
+  if($_SESSION['userName']==true){
+    $user = $_SESSION['userName']; 
+  }
+   $host        = "host = ec2-54-227-250-33.compute-1.amazonaws.com";
+   $port        = "port = 5432";
+   $dbname      = "dbname = dfh1ffcplg2486";
+   $credentials = "user = eacvhyhfmkrufp password=09ed8a0efcefee49aecd377a6e0a69cbfa41939219c9a9747eb0324c7d616d24";
+
+   $db = pg_connect( "$host $port $dbname $credentials"  );
+   if(!$db) {
+      echo "Error : Unable to open database\n";
+   }
+
+    $page = $_GET['page'];
+      $sql =<<<EOF
+      set search_path to sco;
+      select * from procurement where id='$page';
+EOF;
+
+      $ret = pg_query($db, $sql);
+      if(!$ret) {
+         echo pg_last_error($db);
+      }
+      
+      $row=pg_fetch_row($ret);
+      pg_close($db);
+?>  
+
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Information</h4>
