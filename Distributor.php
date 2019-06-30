@@ -52,7 +52,7 @@
 
       $sql =<<<EOF
       set search_path to sco;
-      select * from procurement where dName='$user';
+      select * from procurement where pname='$user';
 EOF;
 
       $ret = pg_query($db, $sql);
