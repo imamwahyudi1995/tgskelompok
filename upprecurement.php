@@ -26,7 +26,6 @@ EOF;
       
       $row=pg_fetch_row($ret);
       pg_close($db);
-      exit;
 ?>  
 
 
