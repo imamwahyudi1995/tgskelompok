@@ -13,7 +13,7 @@
       echo "Error : Unable to open database\n";
    }
 
-    $page = GET['page'];
+    $page = $_GET['page'];
       $sql =<<<EOF
       set search_path to sco;
       select * from procurement where pname='$user' id='$page';
