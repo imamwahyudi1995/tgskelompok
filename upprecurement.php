@@ -57,9 +57,10 @@ EOF;
 								</div>
 								<div class="form-group">
 									<label for="Availability">Add quantity</label>
-									<input id="Availability" type="Integer" class="form-control" value="<?php echo $row[2]; ?>" name="Availability" required data-eye>
+									<input id="Availability" type="number" class="form-control" value="<?php echo $row[2]; ?>" name="Availability" required data-eye>
 								</div>
 								<div class="form-group no-margin">
+                                    <input type="hidden" name="id" value="<?php echo $row[4] ?>" >
 									<input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block" />
 								</div>
 							</form>

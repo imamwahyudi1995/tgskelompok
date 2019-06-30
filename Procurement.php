@@ -69,8 +69,9 @@ EOF;
          <td><?php echo $tgl; ?></td>
          <td><?php echo $material; ?></td>
          <td><?php echo $quantity;?></td>
-         <td><a href="upprecurement.php?page=<?php echo $row[4] ?>" class="btn btn-success">Update</a></td>
-         <td><a href="delprecurement.php?page=<?php echo $row[4] ?>" class="btn btn-danger">Delete</a></td>
+         <td><a href="upprecurement.php?page=<?php echo $row[4] ?>" class="btn btn-success">Update</a>
+            <a href="delprecurement.php?page=<?php echo $row[4] ?>" class="btn btn-danger">Delete</a>
+          </td>
          
       </tr>
 
