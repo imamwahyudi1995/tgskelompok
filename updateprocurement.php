@@ -18,7 +18,7 @@
 
       $sql =<<<EOF
       set search_path to sco;
-      update supplier set tanggal=$date, quality=$avail, material=$raw where id=$id ;
+      update supplier set tanggal='$date', quantity='$avail', material='$raw' where id='$id' ;
 EOF;
       
       $ret = pg_query($db, $sql);
