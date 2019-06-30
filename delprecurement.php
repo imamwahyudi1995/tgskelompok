@@ -26,7 +26,7 @@ EOF;
       pg_close($db);
       
       echo "<script>location='Procurement.php'</script>";
-      header('Location: Supplier.html');
+      header('Location: Procurement.php');
       exit;
    
 ?>
