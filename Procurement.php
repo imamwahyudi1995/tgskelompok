@@ -22,8 +22,7 @@
   <a href="logout.php" class="btn">Logout</a>
 </div>
 <div class="sup">
-    <a href="placeOrder.html" class="btn">Place Order</a>
-    <a href="aitemd.html" class="btn">Add item</a>
+    <a href="newProcurement.html" class="btn">Add item</a>
     <a href="uitemd.html" class="btn">Update item</a>
     <a href="pHistoryd.html" class="btn">Purchase History</a>
     <a href="sHistoryd.html" class="btn">Sales History</a>
@@ -35,6 +34,7 @@
         <th>Tanggal</th>
         <th>Raw Material</th>
         <th>Quantity</th>
+        <th>Action</th>
       </tr>
 
 <?php
@@ -69,6 +69,9 @@ EOF;
          <td><?php echo $tgl; ?></td>
          <td><?php echo $material; ?></td>
          <td><?php echo $quantity;?></td>
+         <td><a href="upprecurement.php?page=<?php echo $row[5] ?>" class="btn btn-success">Update item</a></td>
+         <td><a href="delprecurement.php?page=<?php echo $row[5] ?>" class="btn btn-danger">Update item</a></td>
+         
       </tr>
 
 <?php       
