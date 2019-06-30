@@ -16,13 +16,12 @@
       $raw = $_POST['raw_material'];
       $avail = $_POST['Availability'];
       $user = $_SESSION['userName'];
-      $cost = "";
 
       
 
       $sql =<<<EOF
       set search_path to sco;
-      insert into procurement values ('$tgl','$raw','$avail','$cost','$user');
+      insert into procurement values ('$tgl','$raw','$avail','$user');
 EOF;
       
       $ret = pg_query($db, $sql);
