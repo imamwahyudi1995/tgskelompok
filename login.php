@@ -39,7 +39,7 @@ EOF;
               echo "<script>location='Supplier.php'</script>";
               break;
             case 'procurement':
-              echo "<script>location='Distributor.php'</script>";
+              echo "<script>location='Procurement.php'</script>";
               break;
             case 'transporter':
               echo "<script>location='transporter.php'</script>";

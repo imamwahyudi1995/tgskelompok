@@ -34,7 +34,6 @@
       <tr>
         <th>Tanggal</th>
         <th>Raw Material</th>
-        <th>Cost Per Ton</th>
         <th>Quantity</th>
       </tr>
 
@@ -63,14 +62,12 @@ EOF;
       while($row=pg_fetch_row($ret)){
          $tgl = $row[0];
          $material = $row[1];
-         $cost = $row[2];
          $quantity = $row[3];
 ?>  
    
       <tr>
          <td><?php echo $tgl; ?></td>
          <td><?php echo $material; ?></td>
-         <td><?php echo $cost;?></td>
          <td><?php echo $quantity;?></td>
       </tr>
 
