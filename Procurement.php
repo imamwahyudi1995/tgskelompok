@@ -62,15 +62,15 @@ EOF;
       while($row=pg_fetch_row($ret)){
          $tgl = $row[0];
          $material = $row[1];
-         $quantity = $row[3];
+         $quantity = $row[2];
 ?>  
    
       <tr>
          <td><?php echo $tgl; ?></td>
          <td><?php echo $material; ?></td>
          <td><?php echo $quantity;?></td>
-         <td><a href="upprecurement.php?page=<?php echo $row[5] ?>" class="btn btn-success">Update item</a></td>
-         <td><a href="delprecurement.php?page=<?php echo $row[5] ?>" class="btn btn-danger">Update item</a></td>
+         <td><a href="upprecurement.php?page=<?php echo $row[4] ?>" class="btn btn-success">Update</a></td>
+         <td><a href="delprecurement.php?page=<?php echo $row[4] ?>" class="btn btn-danger">Delete</a></td>
          
       </tr>
 
